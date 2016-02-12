@@ -1,0 +1,13 @@
+[
+{
+	"id":"vancouverok",
+    "title": "VancouverOk News Portal",
+    "actuallink": "http://vancouverok.com/",
+    "techused": [{"type":"Wordpress", "why": "CMS"}, {"type": "Plugins", "why": "Business directory"}],
+     "features": [{"feature":"Wordpress set-up and customization"}, {"feature":"PHP, HTML/CSS."}, {"feature":"Setup of business directory and advertising category."},{"feature":"Plugins were localized"}],
+	"date": 2015,
+    "screenshots": ["./img/projects/vancouverok/vancouverok.png", "./img/projects/vancouverok/vancouverok-mobile.png"],
+	"description":"Vancouverok is a leading news portal for Russian speaking residents of Vancouver."
+}
+
+]

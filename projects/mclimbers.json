@@ -1,0 +1,23 @@
+[
+{
+	"id":"mclimbers",
+    "title": "Mountain Climbers App",
+    "github":"https://github.com/maria-taranova/mclimbers",
+    "actuallink": "http://mtaranova.com/mclimbers/",
+    "techused": [{"type":"Framework7", "why": "for core"}, {"type": "PHP", "why": "for back-end"}, {"type": "APIs", "why": "Facebook, Instragram, Google Maps"}],
+     "features": [{"feature":"Search trails based on name"}, {"feature":"Search trails on Map and by user's location"}, {"feature":"One page, AJAX to load the views"}, {"feature":"Leave comments, see and delete posted comments"}, {"feature":"Rate trail with 5 star rating "}],
+	"date": 2015,
+    "screenshots": ["./img/projects/mclimbers/mclimbers-1.png", "./img/projects/mclimbers/mclimbers-2.png"],
+	"description":" An app mimicing native iOS style and inter- action patterns dedicated to provide BC hiking lovers with reliable and user-friendly trail databse. Allows to post comments and rate the trails. Shows trails based on the user’s location.",
+    "process": "Mountain Climbers App came up as a course project for Web Programming class at BCIT. In a team of four we were challenged to build a fully functional prototype for a web app. Specific requirements included integrating at least 2 APIs and make it responsive.",
+    "steps": [{"step": "Idea initialization. Basic workflow was created.", "img": "./img/projects/mclimbers/mclimbers-workflow.png"}, 
+              {"step": "Oulining databse table structure", "img": "./img/projects/mclimbers/mclimbers-db.png"},
+              {"step": "HTML/CSS wireframe", "video": "./img/projects/mclimbers/wireframe-video.mp4"},
+              {"step": "Routing the views, calling database with PHP"},
+              {"step": "Integrating APIs", "img": "./img/projects/mclimbers/mclimbers-api.png"},
+              {"step": "Tests", "img": "./img/projects/mclimbers/usertest.jpg"},
+              {"step": "Returning to step 2"},
+              {"step": "Delivering presentation.", "video":"http://www.youtube.com/embed/VzwnDLq14Y4"}]
+}
+
+]

@@ -1,0 +1,104 @@
+<!-- Simple header with fixed tabs. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+            mdl-layout--fixed-tabs">
+  <div class="mdl-layout__header"  style="background-color: lightgrey">
+    <div class="mdl-layout__header-row" style="background-color: lightgrey">
+        
+      <!-- Title -->
+    </div>
+    <!-- Tabs -->
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect"  style="background-color: lightgrey">
+      <a ng-click='tabs(1)' ng-class="{'is-active':result==1, '':result!=1}" class="mdl-layout__tab">Result</a>
+      <a ng-click='tabs(2)' ng-class="{'is-active':result==2, '':result!=2}" class="mdl-layout__tab" ng-show="step(this)">Process</a>
+      <a ng-click='tabs(3)' ng-class="{'is-active':result==3, '':result!=3}" class="mdl-layout__tab" ng-show="feedback(this)">Feedback</a>
+    </div>
+  </div>
+
+  <div class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel" ng-class="{'is-active':result==1, '':result!=1}"id="result">
+      <div class="page-content">
+                   <div class="mdl-layout__header-row">
+<span class="mdl-layout-title"> {{project.title}}</span>
+            <div class="mdl-layout-spacer"></div>
+  <a href={{project.actuallink}}  target="_blank"> 
+                  SEE ALIVE
+              </a>&nbsp;&nbsp;
+    <div class="mdl-tooltip" for="link">
+Check it out in new tab!
+</div>
+        <a href={{project.github}} target="_blank" ng-show="git(this)"> 
+                  <img src="img/icons/github.png"/ style="height: 40px;">
+              </a>
+               
+   
+              
+      </div>
+          
+          <div class="mdl-grid">
+              
+              
+              
+                <div class="mdl-cell mdl-cell--2-col">
+              
+          
+              </div>
+
+
+              
+  <div class="mdl-cell mdl-cell--8-col"> 
+ <hr>
+                   
+
+    <pre>{{project.description}}<br>
+      <ul><lh>Technology used:</lh>
+          <li ng-repeat="tech in project.techused">{{tech.type}} - {{tech.why}}</li>
+      </ul>
+      <ul><lh>Features:</lh>
+          <li ng-repeat="feature in project.features">{{feature.feature}}</li>
+      </ul>
+      </pre>
+      
+   
+        <img ng-repeat="screenshot in project.screenshots" src={{screenshot}}  style="height: 600px;"/>
+      
+        <hr>
+          
+              
+</div>
+                <div class="mdl-cell mdl-cell--2-col">
+      
+                    
+                </div>
+
+</div>
+          
+         
+</div>
+    </section>
+    <section class="mdl-layout__tab-panel" ng-class="{'is-active':result==2, '':result!=2}" id="process">
+      <div class="page-content">
+                
+          
+          <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--2-col"></div>
+
+  <div class="mdl-cell mdl-cell--8-col"> 
+      <pre>{{project.process}}</pre>
+    <pre>
+      <ol><lh>Development steps:</lh>
+          <li ng-repeat="step in project.steps" >{{step.step}}<br><img ng-show="img(this)" ng-src={{step.img}} style="height: 400px;"></img> <iframe ng-show="video(this)"  height="400" src="{{step.video}}"></iframe><br><br><br></li>
+   
+      </ol>
+     </pre>
+      
+</div>
+                <div class="mdl-cell mdl-cell--2-col"></div>
+
+</div>
+        </div>
+    </section>
+    <section class="mdl-layout__tab-panel" ng-class="{'is-active':result==3, '':result!=3}" id="else">
+      <div class="page-content"><!-- Your content goes here --></div>
+    </section>
+  </div>
+</div>

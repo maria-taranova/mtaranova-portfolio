@@ -1,0 +1,125 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <div class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Development</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+ 
+    </div>
+  </div>
+</div>
+<div class="mdl-grid">
+          <!--Filters-->
+
+  <div class="mdl-cell mdl-cell--2-col">
+      
+    <span class="mdl-layout-title">Filters:</span>
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+          <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" ng-model="type.wordpress" >
+          <span class="mdl-checkbox__label">Wordpress</span>
+        </label>
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+          <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" ng-model="type.htmlcssjs">
+          <span class="mdl-checkbox__label">HTML/CSS</span>
+        </label>
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+          <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" ng-model="type.angular">
+          <span class="mdl-checkbox__label">AngularJS</span>
+        </label>
+         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+          <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" ng-model="type.php">
+          <span class="mdl-checkbox__label">PHP</span>
+        </label>
+	 </div>
+    
+	      <!--New-->
+          <!--Participation-->
+
+  <div class="mdl-cell mdl-cell--2-col">
+      
+    <span class="mdl-layout-title">Participation:</span>
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+          <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" ng-model="participation.team"  >
+          <span class="mdl-checkbox__label">Team</span>
+        </label>
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+          <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" ng-model="participation.individual">
+          <span class="mdl-checkbox__label">Individual</span>
+        </label>
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+          <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" ng-model="participation.contract">
+          <span class="mdl-checkbox__label">Contractor</span>
+        </label>
+    
+	 </div>
+    
+	      <!--Participation End-->
+
+
+               <!--Complexity-->
+
+
+	      <!--Complexity End-->
+
+	
+         <!--Date and project size-->
+
+  <div class="mdl-cell mdl-cell--2-col" >
+      
+    <p class="mdl-layout-title">Sort by:</p>
+	
+      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="date">
+  <input type="radio" id="date" class="mdl-radio__button" name="options" value="date" ng-model="orderProp">
+  <span class="mdl-radio__label">Date</span>
+</label>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="size">
+  <input type="radio" id="size" class="mdl-radio__button" name="options" value="size" ng-model="orderProp">
+  <span class="mdl-radio__label">Project size</span>
+</label>
+   
+</div>
+
+    
+	 </div>
+    
+	      <!--Date and project size End-->
+
+
+
+
+
+    <!--card-->
+    <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
+	<main class="mdl-layout__content">
+		<div class="mdl-grid">
+			
+			
+			<div ng-repeat="work in works | filterBy: {'key':'type', 'values':type} | filterBy: {'key':'participation', 'values':participation} | filterBy: {'key':'seriousness', 'values':seriousness} | orderBy:orderProp:true" class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
+
+				<figure class="mdl-card__media">
+					<img src={{work.image}} alt="" />
+				</figure>
+				<div class="mdl-card__title">
+					<h1 class="mdl-card__title-text">{{work.title}}</h1>
+				</div>
+                
+				<div class="mdl-card__supporting-text">
+					<p>{{work.description}}</p>
+                    <p>{{work.category}}</p>
+				</div>
+				<div class="mdl-card__actions mdl-card--border">
+    <a href="#/{{work.id}}"  class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More</a>
+    <div class="mdl-layout-spacer"></div>
+    	</div>
+			</div>
+		</div>
+	</main>
+</div>
+    <!--card new-->
+        <!--Content is here-->
+
+    <!--Content is here-->
+    
+</div>

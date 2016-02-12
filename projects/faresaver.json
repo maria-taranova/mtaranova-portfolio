@@ -1,0 +1,20 @@
+[
+{
+	"id":"faresaver",
+    "title": "Faresavers Caculator",
+    "github":"https://github.com/maria-taranova/mclimbers",
+    "actuallink": "http://mtaranova.com/fare-calculator/",
+    "techused": [{"type":"JQuery", "why": "user intecations"}, {"type": "Animate.css", "why": "for background animations"}, {"type": "MaterializeCSS", "why": "For quick prototyping"}],
+     "features": [{"feature":"Calculate rates for single trip"}, {"feature":"Calculate monthly pass rates"}, {"feature":"Tips on how to save on multiple trips"}],
+	"date": 2015,
+    "screenshots": ["./img/projects/faresavers/fare-saver.png"],
+	"description":"Simpe and fun calculator to plan a travel with Translik. Calculates the total and proposes a way to optimize expenses for frequent commuters.",
+    "process": "Nothing too complicated, just a way to practice basic JQuery libraby.",
+    "steps": [{"step": "Outlining logic", "img":"./img/projects/faresavers/faresaver_ticket.jpg"}, 
+              {"step": "Braking down the options for commuters "},
+              {"step": "Implementing basic calculations"},
+              {"step": "MaterializeCSS implementation"},
+              {"step": "Animating background (rombs change color and shakes depending on the user input)", "img": "./img/projects/faresavers/rombs.png"}]
+}
+
+]

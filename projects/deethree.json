@@ -1,0 +1,13 @@
+[
+{
+	"id":"dethree",
+    "title": "Microbrewery Ecommerce Store",
+    "github":"https://github.com/maria-taranova/microbrewery-FE",
+    "actuallink": "http://mtaranova.com/microbrewery/",
+    "techused": [{"type":"AngularJS", "why": "front-end"}, {"type": "PHP", "why": "for back-end"}, {"type": "Custom beer labels", "why": "Authored and created by MD"}],
+     "features": [{"feature":"Search beers"}, {"feature":"Add those to cart"}, {"feature":"Check out"}],
+	"date": 2016,
+	"description":"One page store for a fictional Microbrewery."
+}
+
+]

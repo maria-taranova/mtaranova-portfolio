@@ -1,0 +1,13 @@
+[
+{
+	"id":"portfolio",
+    "title": "Portfolio",
+    "github":"https://github.com/maria-taranova/mtaranova-portfolio",
+    "actuallink": "http://mtaranova.com/",
+    "techused": [{"type":"AngularJS", "why": "front-end"}, {"type": "Material Lite Framework", "why": "for UI"}],
+     "features": [{"feature":"Filters"}, {"feature":"One page"}],
+	"date": 2016,
+	"description":"In process of creating a simple portfolio to organize my projects"
+}
+
+]

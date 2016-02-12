@@ -1,0 +1,18 @@
+
+[
+{
+	"id":"sunpump",
+	"image":"factory.png",
+	"featured":true,
+	"size":15,
+	"completion": "done",
+	"seriousness":"serious",
+	"type":"code",
+	"participation":"lead",
+	"title":"SunPump Solar Inc.",
+	"category":"Wordpress",
+	"date": 2015,
+	"description":"SunPump Solar Inc. is a Canadian Cleantech company. With a website re-design, the company aimed for satisfying needs both for new customers inquiring information and contractors looking for technical documentation.",
+	"link": {"href":"http://sunpump.solar", "value":"sunpump"}
+}
+]

@@ -1,0 +1,19 @@
+[
+{
+	"id":"sunpump",
+    "title": "SunPump Solar Website",
+    "actuallink": "http://mtaranova.com/fare-calculator/",
+    "techused": [{"type":"Wordpress", "why": "CMS"}, {"type": "Plugins", "why": "Salesforce and Mailchimp integration"}],
+     "features": [{"feature":"Mailchimp email subscribtion"}, {"feature":"Dealers area with restricted access"}, {"feature":"Comprehensive filters for case studies section"}],
+	"date": 2015,
+    "screenshots": ["./img/projects/sunpump/sunpump.png", "./img/projects/sunpump/sunpump-mobile.png"],
+	"description":"SunPump Solar Inc. is a Canadian Cleantech company located near Vancouver, B.C. With a website re-design, the company aimed for satisfying needs both for new customers in- quiring information and contractors looking for technical documentation.",
+    "process": "Nothing too complicated, just a way to practice basic JQuery libraby.",
+    "steps": [{"step": "Reseach on theme to be used"}, 
+              {"step": "Outlinin the sctructure"},
+              {"step": "Collecting assests and texts to be used"},
+              {"step": "Integration of plugins"},
+              {"step": "Review and adding additional features"}]
+}
+
+]
