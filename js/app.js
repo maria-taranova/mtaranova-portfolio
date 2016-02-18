@@ -2,7 +2,10 @@
 var myApp = angular.module('portfolio', ['portfolio.services', 'portfolio.filters']);
 
 myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
-  $routeProvider.when('/',{
+ 
+    $locationProvider.html5Mode(true);
+    
+    $routeProvider.when('/',{
         templateUrl:'partials/home.html',
       })
      .when('/design',{
