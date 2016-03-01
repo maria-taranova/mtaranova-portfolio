@@ -1,5 +1,5 @@
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <div class="mdl-layout__header">
+  <div class="mdl-layout__header" style="background-color: #4c6a92;">
     <div class="mdl-layout__header-row">
       <!-- Title -->
       <span class="mdl-layout-title">Development</span>
@@ -10,6 +10,10 @@
     </div>
   </div>
 </div>
+
+    
+	      <!--Date and project size End-->
+
 <div class="mdl-grid">
           <!--Filters-->
 
@@ -83,20 +87,17 @@
 
     
 	 </div>
-    
-	      <!--Date and project size End-->
-
-
 
 
 
     <!--card-->
     <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
+    
 	<main class="mdl-layout__content">
 		<div class="mdl-grid">
 			
 			
-			<div ng-repeat="work in works | filterBy: {'key':'type', 'values':type} | filterBy: {'key':'participation', 'values':participation} | filterBy: {'key':'seriousness', 'values':seriousness} | orderBy:orderProp:true" class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
+			<div ng-repeat="work in works | filterBy: {'key':'type', 'values':type} | filterBy: {'key':'participation', 'values':participation} | filterBy: {'key':'seriousness', 'values':seriousness} | orderBy:orderProp:true" class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-shadow--2dp">
 
 				<figure class="mdl-card__media">
 					<img src={{work.image}} alt="" />
@@ -106,11 +107,10 @@
 				</div>
                 
 				<div class="mdl-card__supporting-text">
-					<p>{{work.description}}</p>
-                    <p>{{work.category}}</p>
+					{{work.description|cut:true:100:' ...'}}
 				</div>
 				<div class="mdl-card__actions mdl-card--border">
-    <a href="#/{{work.id}}"  class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More</a>
+    <a href="development/{{work.id}}"  class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{work.category}}</a>
     <div class="mdl-layout-spacer"></div>
     	</div>
 			</div>

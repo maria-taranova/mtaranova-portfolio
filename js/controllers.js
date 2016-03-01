@@ -8,13 +8,21 @@ myApp.controller('DevelopmentCtrl',['$scope', '$http', '$location', function($sc
     .then(function(response) {
         $scope.works = response.data;
     });
+$scope.limit= 5;
 	$scope.orderProp = 'date';
 	$scope.type = {'wordpress': true, 'htmlcssjs':true, 'angular':true, 'php': true};
 	$scope.participation = {'team':true, 'individual':true ,'contract':true,};
 	$scope.seriousness = {'serious':true, 'notsoserious':true};
+    
 }]);
 
-
+myApp.run(function($rootScope, $location, $timeout) {
+    $rootScope.$on('$viewContentLoaded', function() {
+        $timeout(function() {
+            componentHandler.upgradeAllRegistered();
+        });
+    });
+});
 myApp.controller('DesignCtrl',['$scope', '$http', '$location', function($scope,  $http, $location) {
     $http.get("design.json")
     .then(function(response) {

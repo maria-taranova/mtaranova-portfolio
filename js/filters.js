@@ -1,8 +1,8 @@
 'use strict';
 
 /* Filters */
-angular.module('portfolio.filters', [])
-	.filter('filterBy', function() {
+var portfolioFilter = angular.module('portfolio.filters', []);
+	portfolioFilter.filter('filterBy', function() {
 		return function(works, filter) {
 
 			// transform the input values ("type":Object) to a simpler version ("type":Array).
@@ -20,3 +20,14 @@ angular.module('portfolio.filters', [])
 
 		};
 	});
+
+portfolioFilter.filter('strLimit', ['$filter', function($filter) {
+   return function(input, limit) {
+     if (! input) return;
+     if (input.length <= limit) {
+          return input;
+      }
+    
+      return $filter('limitTo')(input, limit) + '...';
+   };
+}]);
